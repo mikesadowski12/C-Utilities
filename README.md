@@ -1,7 +1,7 @@
 # C PROGRAMMING UTILITY
 
 Mike Sadowski
-April 6th, 2016
+[April 6th, 2016]
 
 Utility to start a C programming project:
  *		Utility functions: User Input, Data Verification, etc
