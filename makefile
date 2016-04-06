@@ -13,17 +13,17 @@ flags = -Wall
 
 all: clean $(programname)
 	
-$(programname): start LinkedList.o
+$(programname): start
 	$(compiler) $(flags) $(files) -o $(output)
 	#$(compiler) $(flags) $(files) ./$(programname)/*.o -o $(output)
 	mv $(output) $(programname)
 
 LinkedList.o:
-	gcc -c -Wall ./2DataStructures/1LinkedList/*.c
+	gcc -c -Wall ./DataStructures/LinkedList/*.c
 	mv *.o ./$(programname)
 	
 HashTable.o:
-	gcc -c -Wall ./2DataStructures/1HashTable/*.c
+	gcc -c -Wall ./DataStructures/HashTable/*.c
 	mv *.o ./$(programname)
 
 start:

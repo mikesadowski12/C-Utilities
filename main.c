@@ -7,8 +7,8 @@
 
 /*
  *		#include "./header.h"
- * 		#include "./2DataStructures/1LinkedList/LinkedList.h"
- * 		#include "./2DataStructures/2HashTable/HashTable.h"
+ * 		#include "./DataStructures/LinkedList/LinkedList.h"
+ * 		#include "./DataStructures/HashTable/HashTable.h"
 */
 
 #include "./header.h"
