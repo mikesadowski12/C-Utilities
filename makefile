@@ -12,7 +12,7 @@ flags = -Wall
 
 all: clean $(programname)
 	
-$(programname): start Utilities.o
+$(programname): start Utilities.o LinkedList.o HashTable.o
 	$(compiler) $(flags) $(files) ./$(programname)/*.o -o $(output)
 	mv $(output) $(programname)
 
