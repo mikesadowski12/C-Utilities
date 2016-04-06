@@ -6,9 +6,7 @@
 */
 
 /*
- *		"./Utilities/utilities.h"
- * 		"./DataStructures/LinkedList/LinkedList.h"
- * 		"./DataStructures/HashTable/HashTable.h"
+ *		
 */
 
 #include "./Utilities/utilities.h"
