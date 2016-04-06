@@ -6,17 +6,19 @@
 programname = program
 output = main
 files = main.c
-includes = ./header.h
 
 compiler = gcc
 flags = -Wall
 
 all: clean $(programname)
 	
-$(programname): start
-	$(compiler) $(flags) $(files) -o $(output)
-	#$(compiler) $(flags) $(files) ./$(programname)/*.o -o $(output)
+$(programname): start Utilities.o LinkedList.o
+	$(compiler) $(flags) $(files) ./$(programname)/*.o -o $(output)
 	mv $(output) $(programname)
+
+Utilities.o:
+	gcc -c -Wall ./Utilities/*.c
+	mv *.o ./$(programname)
 
 LinkedList.o:
 	gcc -c -Wall ./DataStructures/LinkedList/*.c

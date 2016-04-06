@@ -6,14 +6,14 @@
 */
 
 /*
- *		#include "./header.h"
+ *		#include "./Utilities/utilities.h"
  * 		#include "./DataStructures/LinkedList/LinkedList.h"
  * 		#include "./DataStructures/HashTable/HashTable.h"
 */
 
-#include "./header.h"
+#include "./Utilities/utilities.h"
 
 int main( int argc, char *argv[] )
-{		
+{			
 	return 1;
 }

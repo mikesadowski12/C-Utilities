@@ -14,7 +14,6 @@
 #include <time.h>
 #include <signal.h>
 
-/*typedef enum {false=0, true=1} bool;*/
 typedef enum { TYPE_ONE, TYPE_TWO } myenum;
 
 union union_value
@@ -32,4 +31,15 @@ typedef struct MyStruct
 	bool bool_val;
 	char* str_val;
 }MyStruct;
+
+/* String Functions */
+char* create_string(char* value);
+void free_string(char* value);
+int StringEquals(void* ls, void* rs);
+int isStringAnInteger(char *string);
+
+/* User Input Functions */
+int get_integer(char *message);
+char getYesNo(char *message);
+
 
