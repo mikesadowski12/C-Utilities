@@ -32,6 +32,8 @@ typedef struct MyStruct
 	char* str_val;
 }MyStruct;
 
+
+
 /* String Functions */
 char* create_string(char* value);
 void free_string(char* value);
