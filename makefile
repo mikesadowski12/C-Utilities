@@ -28,6 +28,10 @@ HashTable.o:
 	gcc -c -Wall ./DataStructures/HashTable/*.c
 	mv *.o ./$(programname)
 
+AVLTree.o:
+	gcc -c -Wall ./DataStructures/AVLTree/*.c
+	mv *.o ./$(programname)
+
 start:
 	mkdir $(programname)
 	

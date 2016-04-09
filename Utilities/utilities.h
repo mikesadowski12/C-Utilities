@@ -14,26 +14,6 @@
 #include <time.h>
 #include <signal.h>
 
-typedef enum { TYPE_ONE, TYPE_TWO } myenum;
-
-union union_value
-{
-	int int_val;
-	float real_val;
-	bool bool_val;
-	char* str_val;
-};
-
-typedef struct MyStruct
-{
-	int int_val;
-	float real_val;
-	bool bool_val;
-	char* str_val;
-}MyStruct;
-
-
-
 /* String Functions */
 char* create_string(char* value);
 void free_string(char* value);

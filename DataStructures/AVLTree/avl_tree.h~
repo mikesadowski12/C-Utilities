@@ -5,8 +5,6 @@
 #ASSIGNEMNT:
 */
 
-#include "../HashTable/HashTable.h"
-
 typedef struct AVL
 {
 	int height;
