@@ -8,12 +8,7 @@ Utility to start a C programming project:
  *		Data Structures: Linked List, Hash Table
 
 How To Use:
- *		Utility functions are automatically included
+ *		All utility/data structure functions are automatically included
  *		to add a data structure
    *		add thename.o to compilation in the makefile 
-   *		paste in the headerfile in main.c
-  
-File Locations:   
- *		"./Utilities/utilities.h"
- * 		"./DataStructures/LinkedList/LinkedList.h"
- * 		"./DataStructures/HashTable/HashTable.h"  
+   
