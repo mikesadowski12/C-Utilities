@@ -7,29 +7,13 @@
 
 #include "avl_tree.h"
 
-int main()
-{
-	AVL *tree = NULL;
-
-	tree = insert_to_tree(tree, "1");	
-	tree = insert_to_tree(tree, "2");	
-	tree = insert_to_tree(tree, "3");		
-	tree = insert_to_tree(tree, "4");
-	
-	print_tree(tree);
-	
-	free_tree(tree);
-	return 1;
-	
-}
-
 /* 
- * Name: insert_to_tree()
+ * Name: insert_avl()
  * Description: 
  * Parameters:
  * Return:
 */
-AVL* insert_to_tree(AVL *head, char *key)
+AVL* insert_avl(AVL *head, char *key)
 {
 	if(head == NULL)
 	{
@@ -49,7 +33,7 @@ AVL* insert_to_tree(AVL *head, char *key)
 		head->int_val = 0;
 		head->real_val = 0.0;
 		head->bool_val = false;
-		strcpy(head->str_val, " ");;
+		strcpy(head->str_val, " ");
 			
 		head->left = NULL;		
 		head->right = NULL;		
@@ -57,7 +41,7 @@ AVL* insert_to_tree(AVL *head, char *key)
 	/*data is less than key, insert left*/
 	else if(strcmp(key,head->key) < 0) 
 	{
-		head->left = insert_to_tree(head->left,key);
+		head->left = insert_avl(head->left,key);
 		
 		/* height is > 1, perform rotate */
 		if (height(head->left) - height(head->right) == 2) 
@@ -77,7 +61,7 @@ AVL* insert_to_tree(AVL *head, char *key)
 	/*data is greater than key, insert right*/
 	else if(strcmp(key,head->key) > 0) 
 	{
-		head->right = insert_to_tree(head->right,key);
+		head->right = insert_avl(head->right,key);
 		
 		/* height is < -1, perform rotate right */
 		if (height(head->right) - height(head->left) == 2) 
@@ -170,12 +154,12 @@ AVL* double_rotate_right(AVL *head)
 }
 
 /* 
- * Name: find()
+ * Name: find_avl()
  * Description: 
  * Parameters:
  * Return:
 */
-AVL* find(AVL* head, char *key)
+AVL* find_avl(AVL* head, char *key)
 {
 	if(head == NULL){ return NULL; }
 	
@@ -261,12 +245,12 @@ void print_tree(AVL* head)
  * Parameters:
  * Return:
 */
-void free_tree(AVL *head)
+void free_tree_avl(AVL *head)
 {
     if( head != NULL )
     {
-        free_tree( head->left );
-        free_tree( head->right );
+        free_tree_avl( head->left );
+        free_tree_avl( head->right );
         free( head->key );
         free( head->str_val );
         free( head );

@@ -22,12 +22,12 @@ typedef struct AVL
 	struct AVL *right;
 }AVL;
 
-AVL* insert_to_tree(AVL *head, char *key);
+AVL* insert_avl(AVL *head, char *key);
 void print_tree(AVL* head);
-void free_tree(AVL *head);
+void free_tree_avl(AVL *head);
 
 int height(AVL *head);
-AVL* find(AVL* head, char *key);
+AVL* find_avl(AVL* head, char *key);
 int find_max(int num1, int num2);
 AVL* find_min(AVL* head);
 
