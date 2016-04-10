@@ -7,6 +7,22 @@
 
 #include "avl_tree.h"
 
+int main()
+{
+	AVL *tree = NULL;
+
+	tree = insert_to_tree(tree, "1");	
+	tree = insert_to_tree(tree, "2");	
+	tree = insert_to_tree(tree, "3");		
+	tree = insert_to_tree(tree, "4");
+	
+	print_tree(tree);
+	
+	free_tree(tree);
+	return 1;
+	
+}
+
 /* 
  * Name: insert_to_tree()
  * Description: 
@@ -117,7 +133,7 @@ AVL* single_rotate_left(AVL *head)
 */
 AVL* double_rotate_left(AVL *head)
 {
-	head = single_rotate_right(head->left);
+	head->left = single_rotate_right(head->left);
 	return single_rotate_left(head);
 }
 
@@ -149,7 +165,7 @@ AVL* single_rotate_right(AVL *head)
 */
 AVL* double_rotate_right(AVL *head)
 {
-	head = single_rotate_left(head->right);
+	head->right = single_rotate_left(head->right);
 	return single_rotate_right(head);
 }
 
