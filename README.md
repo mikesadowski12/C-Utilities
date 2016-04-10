@@ -5,7 +5,7 @@ Mike Sadowski
 
 Utility to start a C programming project:
  *		Utility functions: User Input, Data Verification, etc
- *		Data Structures: Linked List, Hash Table
+ *		Data Structures: Linked List, Hash Table, AVL Tree
 
 How To Use:
  *		All utility/data structure functions are automatically included
